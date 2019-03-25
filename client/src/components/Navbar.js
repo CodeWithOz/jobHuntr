@@ -1,7 +1,15 @@
 import React from 'react';
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <header>
+      <nav>
+        <figure>
+          <img className="logo" src="img/job-huntr-icon.png" alt="logo" />
+        </figure>
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;
