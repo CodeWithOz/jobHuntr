@@ -1,0 +1,25 @@
+nav {
+  background : {
+    color: #ff3569;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo-border {
+      display: inline-block;
+      border-radius: 10px;
+      background-color: #ffa5bc;
+      margin: 10px;
+
+      figure {
+        margin: 0;
+
+        .logo {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
