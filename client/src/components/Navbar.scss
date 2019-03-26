@@ -1,9 +1,12 @@
 nav {
-  background : {
-    color: #ff3569;
-  }
+  background-color: #ff3569;
+  display: grid;
+  grid-template-areas:
+    'logo'
+    'buttons';
 
   .logo-container {
+    grid-area: logo;
     display: flex;
     align-items: center;
 
@@ -26,6 +29,16 @@ nav {
       color: white;
       font-size: 1.5em;
       margin: 0;
+    }
+  }
+
+  .buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn-container {
+      width: 100%;
     }
   }
 }
