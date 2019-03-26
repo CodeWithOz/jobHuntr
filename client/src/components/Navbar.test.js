@@ -16,9 +16,18 @@ describe('Navbar renders', () => {
   });
 
   describe('a button for', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = shallow(<Navbar />);
+    });
+
     test('logging in', () => {
-      const wrapper = shallow(<Navbar />);
       expect(wrapper.find('.log-in-btn').length).toEqual(1);
+    });
+
+    test('the menu icon', () => {
+      expect(wrapper.find('.fas.fa-bars').length).toEqual(1);
     });
   });
 });
