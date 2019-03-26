@@ -12,7 +12,7 @@ const Navbar = ({ logo, title }) => {
               <img className="logo" src={logo} alt="logo" />
             </figure>
           </div>
-          <p>{title}</p>
+          <p className="title">{title}</p>
         </section>
       </nav>
     </header>
