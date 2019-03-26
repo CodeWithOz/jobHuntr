@@ -14,4 +14,12 @@ describe('Navbar renders', () => {
     const wrapper = shallow(<Navbar title={title} />);
     expect(wrapper.text()).toContain(title);
   });
+
+  describe('a button for', () => {
+    test('logging in', () => {
+      const wrapper = shallow(<Navbar />);
+      expect(wrapper.find('.log-in-btn').length).toEqual(1);
+      expect(wrapper.find('.log-in-btn').is('button')).toEqual(true);
+    });
+  });
 });
