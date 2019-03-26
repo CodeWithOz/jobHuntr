@@ -8,4 +8,10 @@ describe('Navbar renders', () => {
     expect(wrapper.find('.logo').length).toEqual(1);
     expect(wrapper.find('.logo').is('img')).toEqual(true);
   });
+
+  test('the supplied title', () => {
+    const title = 'test';
+    const wrapper = shallow(<Navbar title={title} />);
+    expect(wrapper.text()).toContain(title);
+  });
 });
