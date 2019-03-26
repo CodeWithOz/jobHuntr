@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Navbar.scss';
 
-const Navbar = ({ logo }) => {
+const Navbar = ({ logo, title }) => {
   return (
     <header>
       <nav>
@@ -12,6 +12,7 @@ const Navbar = ({ logo }) => {
               <img className="logo" src={logo} alt="logo" />
             </figure>
           </div>
+          <p>{title}</p>
         </section>
       </nav>
     </header>
@@ -20,6 +21,6 @@ const Navbar = ({ logo }) => {
 
 Navbar.defaultProps = { logo: 'img/job-huntr-icon.png' };
 
-Navbar.propTypes = { logo: PropTypes.string };
+Navbar.propTypes = { logo: PropTypes.string, title: PropTypes.string };
 
 export default Navbar;
