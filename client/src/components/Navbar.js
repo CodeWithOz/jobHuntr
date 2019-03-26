@@ -14,6 +14,9 @@ const Navbar = ({ logo, title }) => {
           </div>
           <p className="title">{title}</p>
         </section>
+        <section className="menu-container">
+          <i className="fas fa-bars" />
+        </section>
         <section className="buttons">
           <div className="btn-container">
             <button className="log-in-btn" type="button">
