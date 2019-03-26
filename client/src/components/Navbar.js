@@ -14,6 +14,11 @@ const Navbar = ({ logo, title }) => {
           </div>
           <p className="title">{title}</p>
         </section>
+        <section className="buttons">
+          <button className="log-in-btn" type="button">
+            Log In
+          </button>
+        </section>
       </nav>
     </header>
   );
