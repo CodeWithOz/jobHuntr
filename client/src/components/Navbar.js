@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MenuIcon from './MenuIcon';
 
 const Navbar = ({ logo, title }) => {
   return (
@@ -14,7 +15,7 @@ const Navbar = ({ logo, title }) => {
           <p className="title">{title}</p>
         </section>
         <section className="menu-container">
-          <i className="fas fa-bars" />
+          <MenuIcon />
         </section>
         <section className="buttons">
           <div className="btn-container">
