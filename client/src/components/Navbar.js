@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Navbar.scss';
 
 const Navbar = ({ logo, title }) => {
   return (
