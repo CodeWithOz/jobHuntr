@@ -2,9 +2,12 @@ import React from 'react';
 
 const MenuIcon = () => {
   return (
-    <a href>
+    <button className="menu-icon" href>
       <i className="fas fa-bars" />
-    </a>
+      <p>
+        <strong>menu</strong>
+      </p>
+    </button>
   );
 };
 
