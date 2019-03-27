@@ -18,10 +18,8 @@ const Navbar = ({ logo, title }) => {
         <section className="menu-container">
           <MenuIcon />
         </section>
-        <section className="buttons">
-          <div className="btn-container">
-            <NavBtn type="login" />
-          </div>
+        <section className="btn-container">
+          <NavBtn type="login" />
         </section>
       </nav>
     </header>

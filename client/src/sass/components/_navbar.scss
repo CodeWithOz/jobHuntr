@@ -41,14 +41,10 @@ nav {
     justify-content: flex-end;
   }
 
-  .buttons {
+  .btn-container {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
     display: flex;
     flex-wrap: wrap;
-
-    .btn-container {
-      width: 100%;
-    }
   }
 }
