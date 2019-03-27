@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuIcon from './MenuIcon';
+import NavBtn from './NavBtn';
 
 const Navbar = ({ logo, title }) => {
   return (
@@ -19,9 +20,7 @@ const Navbar = ({ logo, title }) => {
         </section>
         <section className="buttons">
           <div className="btn-container">
-            <button className="log-in-btn" type="button">
-              Log In
-            </button>
+            <NavBtn type="login" />
           </div>
         </section>
       </nav>
