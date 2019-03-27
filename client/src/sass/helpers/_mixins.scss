@@ -1,14 +1,18 @@
-@mixin custom-btn(
-  $font-size,
-  $padding,
-  $background: inherit,
-  $border: none,
-  $color: inherit
-) {
+@mixin custom-btn($font-size, $padding, $background: inherit, $color: inherit) {
   @extend %default-btn;
   font-size: $font-size;
   padding: $padding;
   background: $background;
   color: $color;
-  border: $border;
+}
+
+@mixin get-border($top, $left: inherit, $bottom: inherit, $right: inherit) {
+  @if ($top == null) {
+    border: none;
+  } @else {
+    border-top: $top;
+    border-left: $left;
+    border-bottom: $bottom;
+    border-right: $right;
+  }
 }

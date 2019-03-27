@@ -1,0 +1,6 @@
+.nav-btn {
+  @include custom-btn(inherit, 1.5em);
+  @include get-border(1px dashed $navbar-font-color);
+  text-transform: uppercase;
+  width: 100%;
+}
