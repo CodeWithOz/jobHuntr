@@ -1,0 +1,14 @@
+@mixin custom-btn(
+  $font-size,
+  $padding,
+  $background: inherit,
+  $border: none,
+  $color: inherit
+) {
+  @extend %default-btn;
+  font-size: $font-size;
+  padding: $padding;
+  background: $background;
+  color: $color;
+  border: $border;
+}
