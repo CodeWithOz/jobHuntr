@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Navbar from './Navbar';
 import MenuIcon from './MenuIcon';
+import NavBtn from './NavBtn';
 
 describe('Navbar renders', () => {
   test('a logo image', () => {
@@ -24,7 +25,8 @@ describe('Navbar renders', () => {
     });
 
     test('logging in', () => {
-      expect(wrapper.find('.log-in-btn').length).toEqual(1);
+      expect(wrapper.find({ type: 'login' }).is(NavBtn)).toEqual(true);
+      expect(wrapper.find({ type: 'login' }).length).toEqual(1);
     });
 
     test('the menu icon', () => {
