@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Navbar from './Navbar';
+import MenuIcon from './MenuIcon';
 
 describe('Navbar renders', () => {
   test('a logo image', () => {
@@ -27,7 +28,7 @@ describe('Navbar renders', () => {
     });
 
     test('the menu icon', () => {
-      expect(wrapper.find('.fas.fa-bars').length).toEqual(1);
+      expect(wrapper.find(MenuIcon).length).toEqual(1);
     });
   });
 });
