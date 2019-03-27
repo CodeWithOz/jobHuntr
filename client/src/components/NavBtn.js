@@ -1,7 +1,7 @@
 import React from 'react';
 
-const NavBtn = () => {
-  return <div>NavBtn</div>;
+const NavBtn = ({ type }) => {
+  return <button>{type}</button>;
 };
 
 export default NavBtn;
