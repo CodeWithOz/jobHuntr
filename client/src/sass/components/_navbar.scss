@@ -1,4 +1,7 @@
+@import '../helpers/variables';
+
 nav {
+  color: $navbar-font-color;
   background-color: #ff3569;
   display: grid;
   grid-template-columns: 80% 20%;
