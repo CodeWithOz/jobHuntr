@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const NavBtn = ({ type }) => {
   return (
@@ -6,6 +7,10 @@ const NavBtn = ({ type }) => {
       <button className="navbtn">{type}</button>
     </li>
   );
+};
+
+NavBtn.propTypes = {
+  type: PropTypes.string
 };
 
 export default NavBtn;
