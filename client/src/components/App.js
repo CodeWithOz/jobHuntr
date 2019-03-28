@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 
 export const appConfig = {
@@ -7,9 +8,9 @@ export const appConfig = {
 
 const App = () => {
   return (
-    <div>
+    <HashRouter>
       <Navbar title={appConfig.title} />
-    </div>
+    </HashRouter>
   );
 };
 
