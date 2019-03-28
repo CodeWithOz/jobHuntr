@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { HashRouter } from 'react-router-dom';
 import App, { appConfig } from './App';
 import Navbar from './Navbar';
+import Main from './Main';
 
 describe('App renders', () => {
   let wrapper;
@@ -17,6 +18,10 @@ describe('App renders', () => {
 
   test('a HashRouter for URL routing', () => {
     expect(wrapper.find(HashRouter).length).toEqual(1);
+  });
+
+  test('a Main component', () => {
+    expect(wrapper.find(Main).length).toEqual(1);
   });
 });
 
