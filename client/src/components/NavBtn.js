@@ -1,7 +1,11 @@
 import React from 'react';
 
 const NavBtn = ({ type }) => {
-  return <button className="nav-btn">{type}</button>;
+  return (
+    <li className="navbtn-item">
+      <button className="navbtn">{type}</button>
+    </li>
+  );
 };
 
 export default NavBtn;

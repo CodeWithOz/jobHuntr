@@ -17,15 +17,19 @@
   }
 }
 
-@mixin btn-hover($shade: 15%) {
+@mixin darken-bg($shade: 30%) {
+  background-color: darken($navbar-bg, $shade);
+}
+
+@mixin btn-hover() {
   &:hover {
-    background-color: darken($navbar-bg, $shade);
+    @include darken-bg();
   }
 }
 
-@mixin btn-focus($shade: 30%) {
+@mixin btn-focus() {
   &:focus {
-    background-color: darken($navbar-bg, $shade);
+    @include darken-bg();
     box-shadow: 0 0 3px 2px lighten($logo-color, 20%);
     outline: none;
   }

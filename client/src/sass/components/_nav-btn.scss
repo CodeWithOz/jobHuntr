@@ -1,8 +1,17 @@
-.nav-btn {
-  @include custom-btn($font-size: inherit, $padding: 1.5em);
-  @include get-border(1px dashed $navbar-font-color);
-  @include btn-hover();
-  @include btn-focus();
-  text-transform: uppercase;
+.navbtn-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em 0;
   width: 100%;
+
+  .navbtn {
+    @include custom-btn($font-size: inherit, $padding: 1em);
+    @include get-border(null);
+    @include btn-hover();
+    @include btn-focus();
+    border-radius: 2em;
+    text-transform: uppercase;
+  }
 }

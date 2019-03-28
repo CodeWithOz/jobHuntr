@@ -19,9 +19,11 @@ const Navbar = ({ logo, title }) => {
           <p className="title">{title}</p>
         </section>
         <section className="btn-container">
-          {navbarConfig.btns.map((btn, index) => (
-            <NavBtn type={btn.type} key={index} />
-          ))}
+          <ul className="btn-list">
+            {navbarConfig.btns.map((btn, index) => (
+              <NavBtn type={btn.type} key={index} />
+            ))}
+          </ul>
         </section>
       </nav>
     </header>
