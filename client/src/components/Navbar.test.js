@@ -32,5 +32,10 @@ describe('Navbar renders', () => {
     test('the menu icon', () => {
       expect(wrapper.find(MenuIcon).length).toEqual(1);
     });
+
+    test('home', () => {
+      expect(wrapper.find({ type: 'home' }).is(NavBtn)).toEqual(true);
+      expect(wrapper.find({ type: 'home' }).length).toEqual(1);
+    });
   });
 });
