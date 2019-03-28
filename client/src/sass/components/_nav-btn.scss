@@ -1,5 +1,5 @@
 .nav-btn {
-  @include custom-btn(inherit, 1.5em);
+  @include custom-btn($font-size: inherit, $padding: 1.5em);
   @include get-border(1px dashed $navbar-font-color);
   @include btn-hover();
   @include btn-focus();
