@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 
+const navbarConfig = {
+  btns: [{ type: 'login' }, { type: 'home' }]
+};
+
 const Navbar = ({ logo, title }) => {
   return (
     <header>
@@ -19,7 +23,9 @@ const Navbar = ({ logo, title }) => {
           <MenuIcon />
         </section>
         <section className="btn-container">
-          <NavBtn type="login" />
+          {navbarConfig.btns.map((btn, index) => (
+            <NavBtn type={btn.type} key={index} />
+          ))}
         </section>
       </nav>
     </header>
