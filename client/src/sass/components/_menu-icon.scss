@@ -1,6 +1,8 @@
 .menu-icon {
   @include custom-btn(2em, 0.5em);
   @include get-border(null);
+  @include btn-hover();
+  @include btn-focus();
 
   p {
     font-size: 0.5em;

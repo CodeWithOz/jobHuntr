@@ -16,3 +16,17 @@
     border-right: $right;
   }
 }
+
+@mixin btn-hover($shade: 15%) {
+  &:hover {
+    background-color: darken($navbar-bg, $shade);
+  }
+}
+
+@mixin btn-focus($shade: 30%) {
+  &:focus {
+    background-color: darken($navbar-bg, $shade);
+    box-shadow: 0 0 3px 2px lighten($logo-color, 20%);
+    outline: none;
+  }
+}

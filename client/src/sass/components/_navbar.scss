@@ -1,6 +1,6 @@
 nav {
+  background-color: $navbar-bg;
   color: $navbar-font-color;
-  background-color: #ff3569;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: repeat(2, max-content);
