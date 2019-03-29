@@ -9,8 +9,8 @@
   .navbtn {
     @include custom-btn($font-size: inherit, $padding: 1em);
     @include get-border(null);
-    @include btn-hover();
-    @include btn-focus();
+    @include btn-hover($navbar-bg);
+    @include btn-focus($navbar-bg);
     border-radius: 2em;
     text-transform: uppercase;
   }

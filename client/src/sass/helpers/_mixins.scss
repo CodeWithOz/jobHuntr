@@ -1,9 +1,16 @@
-@mixin custom-btn($font-size, $padding, $background: inherit, $color: inherit) {
+@mixin custom-btn(
+  $font-size,
+  $padding,
+  $background: inherit,
+  $color: inherit,
+  $margin: 0
+) {
   @extend %default-btn;
   font-size: $font-size;
   padding: $padding;
   background: $background;
   color: $color;
+  margin: $margin;
 }
 
 @mixin get-border($top, $left: inherit, $bottom: inherit, $right: inherit) {
@@ -17,19 +24,21 @@
   }
 }
 
-@mixin darken-bg($shade: 30%) {
-  background-color: darken($navbar-bg, $shade);
+@mixin darken-by-30($color) {
+  background-color: darken($color, 30%);
 }
 
-@mixin btn-hover() {
+@mixin btn-hover($starting-bg, $color: inherit) {
   &:hover {
-    @include darken-bg();
+    @include darken-by-30($starting-bg);
+    color: $color;
   }
 }
 
-@mixin btn-focus() {
+@mixin btn-focus($starting-bg, $color: inherit) {
   &:focus {
-    @include darken-bg();
+    @include darken-by-30($starting-bg);
+    color: $color;
     box-shadow: 0 0 3px 2px lighten($site-secondary-color, 20%);
     outline: none;
   }
