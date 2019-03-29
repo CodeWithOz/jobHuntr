@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LandingPage from './LandingPage';
+import LandingPage, { landingPageConfig } from './LandingPage';
 import Button from '../Button';
 
 describe('Landing page renders', () => {
@@ -18,5 +18,10 @@ describe('Landing page renders', () => {
   test('a preview image', () => {
     expect(wrapper.find('.preview-img').length).toEqual(1);
     expect(wrapper.find('.preview-img').is('img')).toEqual(true);
+  });
+
+  test('the CTAs', () => {
+    expect(wrapper.text()).toContain(landingPageConfig.cta1);
+    expect(wrapper.text()).toContain(landingPageConfig.cta2);
   });
 });
