@@ -30,7 +30,7 @@
 @mixin btn-focus() {
   &:focus {
     @include darken-bg();
-    box-shadow: 0 0 3px 2px lighten($logo-color, 20%);
+    box-shadow: 0 0 3px 2px lighten($site-secondary-color, 20%);
     outline: none;
   }
 }
