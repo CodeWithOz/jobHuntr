@@ -4,7 +4,8 @@ import Button from '../Button';
 export const landingPageConfig = {
   cta1: {
     text1: 'you apply',
-    text2: 'we track'
+    text2: 'we track',
+    demoText: 'or click here to use a live demo'
   }
 };
 
@@ -18,6 +19,7 @@ const LandingPage = () => {
           <p className="cta cta-1">{cta1.text1}</p>
           <p className="cta cta-2">{cta1.text2}</p>
           <Button type="login" />
+          <p>{cta1.demoText}</p>
         </div>
         <div className="image">
           <figure>
