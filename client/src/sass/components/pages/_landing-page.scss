@@ -1,4 +1,16 @@
+$off-white-bg: darken(white, 10%);
+$bg-color-stop-1: calc(40% + 2px);
+
 .landing-page {
+  background: linear-gradient(
+      170deg,
+      $site-main-color 40%,
+      $off-white-bg $bg-color-stop-1,
+      transparentize(white, 1) $bg-color-stop-1
+    ),
+    linear-gradient(190deg, $off-white-bg, $off-white-bg 70%, white 70%);
+  padding: 3em 0;
+
   .cta-container {
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +27,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      color: white;
 
       .cta {
         font-size: 2.5em;
