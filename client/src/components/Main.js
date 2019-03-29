@@ -4,9 +4,9 @@ import LandingPage from './pages/LandingPage';
 
 const Main = () => {
   return (
-    <div>
+    <main>
       <Route exact path="/" component={LandingPage} />
-    </div>
+    </main>
   );
 };
 
