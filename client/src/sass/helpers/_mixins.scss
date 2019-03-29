@@ -35,11 +35,18 @@
   }
 }
 
+@mixin get-focus-shadow($starting-color, $tint) {
+  box-shadow: 0 0 3px 2px lighten($starting-color, $tint);
+}
+
 @mixin btn-focus($starting-bg, $color: inherit) {
   &:focus {
     @include darken-by-30($starting-bg);
+    @include get-focus-shadow(
+      $starting-color: $site-secondary-color,
+      $tint: 20%
+    );
     color: $color;
-    box-shadow: 0 0 3px 2px lighten($site-secondary-color, 20%);
     outline: none;
   }
 }

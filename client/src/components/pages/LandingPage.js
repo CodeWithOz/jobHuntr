@@ -19,7 +19,9 @@ const LandingPage = () => {
           <p className="cta cta-1">{cta1.text1}</p>
           <p className="cta cta-2">{cta1.text2}</p>
           <Button type="login" />
-          <p>{cta1.demoText}</p>
+          <a href="#fake-link" className="demo-text">
+            {cta1.demoText}
+          </a>
         </div>
         <div className="image">
           <figure>

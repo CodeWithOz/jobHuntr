@@ -44,6 +44,19 @@ $bg-color-stop-1: calc(40% + 2px);
       .cta-2 {
         font-weight: 500;
       }
+
+      .demo-text {
+        color: white;
+
+        &:hover,
+        &:focus {
+          @include get-focus-shadow(
+            $starting-color: $site-secondary-color,
+            $tint: 20%
+          );
+          color: darken(white, 20%);
+        }
+      }
     }
   }
 }
