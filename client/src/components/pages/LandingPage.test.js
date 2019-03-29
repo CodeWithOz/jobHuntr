@@ -21,7 +21,8 @@ describe('Landing page renders', () => {
   });
 
   test('the CTAs', () => {
-    expect(wrapper.text()).toContain(landingPageConfig.cta1);
-    expect(wrapper.text()).toContain(landingPageConfig.cta2);
+    const { cta1 } = landingPageConfig;
+    expect(wrapper.text()).toContain(cta1.text1);
+    expect(wrapper.text()).toContain(cta1.text2);
   });
 });
