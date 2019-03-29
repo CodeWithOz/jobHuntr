@@ -20,9 +20,11 @@ describe('Landing page renders', () => {
     expect(wrapper.find('.preview-img').is('img')).toEqual(true);
   });
 
-  test('the CTAs', () => {
+  test('the CTA text', () => {
+    // first CTA
     const { cta1 } = landingPageConfig;
     expect(wrapper.text()).toContain(cta1.text1);
     expect(wrapper.text()).toContain(cta1.text2);
+    expect(wrapper.text()).toContain(cta1.demoText);
   });
 });
