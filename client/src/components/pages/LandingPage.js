@@ -18,10 +18,14 @@ const LandingPage = () => {
         <div className="text">
           <p className="cta cta-1">{cta1.text1}</p>
           <p className="cta cta-2">{cta1.text2}</p>
-          <Button type="login" />
-          <a href="#fake-link" className="demo-text">
-            {cta1.demoText}
-          </a>
+          <div className="action">
+            <Button type="login" />
+          </div>
+          <div className="action">
+            <a href="#fake-link" className="demo-text">
+              {cta1.demoText}
+            </a>
+          </div>
         </div>
         <div className="image">
           <figure>

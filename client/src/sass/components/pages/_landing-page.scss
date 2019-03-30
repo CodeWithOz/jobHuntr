@@ -45,16 +45,24 @@ $bg-color-stop-1: calc(40% + 2px);
         font-weight: 500;
       }
 
+      .action {
+        text-align: center;
+        width: 100%;
+      }
+
       .demo-text {
         color: white;
 
         &:hover,
         &:focus {
+          color: darken(white, 20%);
+        }
+
+        &:focus {
           @include get-focus-shadow(
             $starting-color: $site-secondary-color,
             $tint: 20%
           );
-          color: darken(white, 20%);
         }
       }
     }
