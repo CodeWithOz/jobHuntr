@@ -47,12 +47,20 @@ nav {
   .btn-container {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
+    position: relative;
 
     .btn-list {
       display: flex;
       flex-wrap: wrap;
       margin: 0;
       padding: 0;
+      position: absolute; // remove from document flow
+      opacity: 0;
+      width: 100%;
+
+      &.shown {
+        opacity: 1;
+      }
     }
   }
 
@@ -67,7 +75,8 @@ nav {
     }
 
     .menu-container {
-      display: none;
+      position: absolute; // remove element from document flow
+      opacity: 0;
     }
 
     .btn-container {
@@ -78,6 +87,8 @@ nav {
       .btn-list {
         width: 100%;
         justify-content: flex-end;
+        opacity: 1;
+        position: static; // put element back in document flow
       }
     }
   }
