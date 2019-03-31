@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 
 const navbarConfig = {
@@ -17,6 +18,9 @@ const Navbar = ({ logo, title }) => {
             </figure>
           </div>
           <p className="title">{title}</p>
+        </section>
+        <section className="menu-container">
+          <MenuIcon />
         </section>
         <section className="btn-container">
           <ul className="btn-list">
