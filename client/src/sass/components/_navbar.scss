@@ -4,7 +4,7 @@ nav {
   background-color: $navbar-bg;
   color: $navbar-font-color;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 70% 30%;
   grid-template-rows: repeat(2, max-content);
 
   .logo-container {
@@ -36,8 +36,16 @@ nav {
     }
   }
 
+  .menu-container {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .btn-container {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
     grid-row: 2 / span 1;
 
     .btn-list {
@@ -56,6 +64,10 @@ nav {
       grid-column: 1 / span 1;
       grid-row: 1;
       justify-content: flex-start;
+    }
+
+    .menu-container {
+      display: none;
     }
 
     .btn-container {
