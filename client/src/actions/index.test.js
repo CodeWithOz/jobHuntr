@@ -12,7 +12,7 @@ describe('toggleNavMenu', () => {
     });
 
     describe('a function that', () => {
-      describe('calls its first argument (dispatch) with', () => {
+      describe('dispatches an action with', () => {
         test('the correct type', () => {
           const dispatch = jest.fn();
           const thunk = jest.fn(toggleNavMenu());
