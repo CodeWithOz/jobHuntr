@@ -13,9 +13,14 @@ describe('toggleNavMenu', () => {
 
     describe('a function that', () => {
       describe('dispatches an action with', () => {
+        let dispatch, thunk;
+
+        beforeEach(() => {
+          dispatch = jest.fn();
+          thunk = jest.fn(toggleNavMenu());
+        });
+
         test('the correct type', () => {
-          const dispatch = jest.fn();
-          const thunk = jest.fn(toggleNavMenu());
           expect(thunk).not.toHaveBeenCalled();
           expect(dispatch).not.toHaveBeenCalled();
 
@@ -24,6 +29,19 @@ describe('toggleNavMenu', () => {
           const dispatchedAction = dispatch.mock.calls[0][0];
           expect(dispatchedAction.type).toBeDefined();
           expect(dispatchedAction.type).toEqual(TOGGLE_NAV_MENU);
+        });
+
+        test('payload reversed from previous state', () => {
+          expect(thunk).not.toHaveBeenCalled();
+          expect(dispatch).not.toHaveBeenCalled();
+
+          const navMenuShown = true;
+          const getState = jest.fn(() => {
+            return { navMenuShown };
+          });
+          thunk(dispatch, getState);
+          const dispatchedAction = dispatch.mock.calls[0][0];
+          expect(dispatchedAction.payload).toEqual(!navMenuShown);
         });
       });
     });
