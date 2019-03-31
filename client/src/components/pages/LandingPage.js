@@ -35,6 +35,13 @@ const LandingPage = () => {
               alt="preview"
             />
           </figure>
+          <figure>
+            <img
+              className="preview-img"
+              src="https://via.placeholder.com/600x300/f5a623/3d3479.png"
+              alt="preview"
+            />
+          </figure>
         </div>
       </section>
     </section>
