@@ -1,7 +1,12 @@
-import { INITIAL_STATE } from '../../constants';
+import { INITIAL_STATE, TOGGLE_NAV_MENU } from '../../constants';
 
-const toggleNavMenuReducer = () => {
-  return INITIAL_STATE.navMenuShown;
+const toggleNavMenuReducer = (
+  currentState = INITIAL_STATE.navMenuShown,
+  { type }
+) => {
+  if (type !== TOGGLE_NAV_MENU) {
+    return currentState;
+  }
 };
 
 export default toggleNavMenuReducer;
