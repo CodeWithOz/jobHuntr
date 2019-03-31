@@ -11,5 +11,15 @@ describe('toggleNavMenuReducer', () => {
       const state = toggleNavMenuReducer(undefined, {});
       expect(state).toEqual(INITIAL_STATE.navMenuShown);
     });
+
+    test(`the current state when action doesn't match`, () => {
+      let currentState = false;
+      let state = toggleNavMenuReducer(currentState, {});
+      expect(state).toEqual(currentState);
+
+      currentState = true;
+      state = toggleNavMenuReducer(currentState, {});
+      expect(state).toEqual(currentState);
+    });
   });
 });
