@@ -15,9 +15,11 @@ describe('Landing page renders', () => {
     expect(wrapper.find({ type: 'login' }).is(Button)).toEqual(true);
   });
 
-  test('a preview image', () => {
-    expect(wrapper.find('.preview-img').length).toEqual(1);
-    expect(wrapper.find('.preview-img').is('img')).toEqual(true);
+  test('two preview images', () => {
+    expect(wrapper.find('.preview-img').length).toEqual(2);
+    wrapper.find('.preview-img').forEach(node => {
+      expect(node.is('img')).toEqual(true);
+    });
   });
 
   test('the CTA text', () => {
