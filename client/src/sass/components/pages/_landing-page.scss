@@ -66,5 +66,22 @@ $bg-color-stop-1: calc(40% + 2px);
         }
       }
     }
+
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: hidden;
+      padding: 4em 2em;
+
+      figure {
+        margin: 0;
+
+        .preview-img {
+          border-radius: 10px;
+          box-shadow: -20px 20px 60px -30px #aaa;
+        }
+      }
+    }
   }
 }
