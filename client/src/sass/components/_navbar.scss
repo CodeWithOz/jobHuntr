@@ -12,7 +12,7 @@ nav {
     grid-row: 1 / span 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     .logo-border {
       display: inline-block;
@@ -71,7 +71,6 @@ nav {
     .logo-container {
       grid-column: 1 / span 1;
       grid-row: 1;
-      justify-content: flex-start;
     }
 
     .menu-container {
