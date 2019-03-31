@@ -68,18 +68,71 @@ $bg-color-stop-1: calc(40% + 2px);
     }
 
     .image {
+      $vertical-pad: 4em;
+      $horizontal-pad: 1em;
+
       display: flex;
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: 4em 2em;
+      padding: $vertical-pad $horizontal-pad;
+      position: relative;
 
       figure {
         margin: 0;
+        position: relative;
+
+        // Crossfade animation
+        // See Demo 3 of http://css3.bradshawenterprises.com/cfimg/
+        $num-images: 2;
+        $time-on-screen: 3s;
+        $crossfade-duration: 0.5s;
+        $total-duration: ($time-on-screen + $crossfade-duration) * $num-images;
+
+        @keyframes imgCrossfade {
+          0% {
+            opacity: 1;
+          }
+          #{(($time-on-screen / $total-duration) * 100)}% {
+            opacity: 1;
+          }
+          #{(1 / $num-images) * 100}% {
+            opacity: 0;
+          }
+          #{100 - (($crossfade-duration / $total-duration) * 100)}% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        animation-name: imgCrossfade;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: $total-duration;
+
+        @for $i from 1 through $num-images {
+          &:nth-of-type(#{$i}) {
+            animation-delay: $total-duration -
+              $i *
+              ($total-duration / $num-images);
+
+            @if $i == 1 {
+              // ensures that one image remains in the document flow
+              position: relative;
+            } @else {
+              // position all other images in the same place as the first
+              position: absolute;
+              left: $horizontal-pad;
+              top: $vertical-pad;
+            }
+          }
+        }
 
         .preview-img {
           border-radius: 10px;
-          box-shadow: -20px 20px 60px -30px #aaa;
+          box-shadow: -10px 20px 60px -30px #aaa;
         }
       }
     }
