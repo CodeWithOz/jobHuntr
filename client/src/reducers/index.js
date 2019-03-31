@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-
-const dummyReducer = () => 'dummy state';
+import toggleNavMenuReducer from './toggleNavMenuReducer';
 
 export default combineReducers({
-  dummyState: dummyReducer
+  navMenuShown: toggleNavMenuReducer
 });
