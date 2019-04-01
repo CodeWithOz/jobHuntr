@@ -1,7 +1,6 @@
-# Job Huntr 📂
+# Job Huntr Frontend
 
-A web app that tracks job applications. Modeled after
-[Huntr](https://huntr.co). Built with React.
+This is the frontend for Job Huntr. Built with React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
