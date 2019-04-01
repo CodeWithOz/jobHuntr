@@ -38,4 +38,12 @@ describe('Navbar renders', () => {
       expect(wrapper.find({ type: 'home' }).length).toEqual(1);
     });
   });
+
+  test(`'shown' class on nav buttons based on navMenuShown prop`, () => {
+    const wrapper = shallow(<Navbar navMenuShown={true} />);
+    expect(wrapper.find('.btn-list.shown').length).toEqual(1);
+
+    wrapper.setProps({ navMenuShown: false });
+    expect(wrapper.find('.btn-list.shown').length).toEqual(0);
+  });
 });
