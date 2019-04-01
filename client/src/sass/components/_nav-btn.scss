@@ -15,7 +15,7 @@
     text-transform: uppercase;
   }
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: $portrait-phone-breakpoint) {
     width: auto;
 
     .navbtn {
