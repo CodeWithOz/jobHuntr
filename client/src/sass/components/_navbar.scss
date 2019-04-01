@@ -57,6 +57,7 @@ nav {
       position: absolute; // remove from document flow
       opacity: 0;
       width: 100%;
+      background: $site-secondary-color;
 
       &.shown {
         opacity: 1;
@@ -87,6 +88,7 @@ nav {
         justify-content: flex-end;
         opacity: 1;
         position: static; // put element back in document flow
+        background: inherit;
       }
     }
   }
