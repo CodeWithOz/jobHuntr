@@ -7,7 +7,7 @@ const navbarConfig = {
   btns: [{ type: 'login' }, { type: 'home' }]
 };
 
-const Navbar = ({ logo, title }) => {
+const Navbar = ({ logo, title, navMenuShown }) => {
   return (
     <header>
       <nav>
@@ -23,7 +23,7 @@ const Navbar = ({ logo, title }) => {
           <MenuIcon />
         </section>
         <section className="btn-container">
-          <ul className="btn-list">
+          <ul className={`btn-list${navMenuShown ? ' shown' : ''}`}>
             {navbarConfig.btns.map((btn, index) => (
               <NavBtn type={btn.type} key={index} />
             ))}
@@ -36,6 +36,10 @@ const Navbar = ({ logo, title }) => {
 
 Navbar.defaultProps = { logo: 'img/job-huntr-icon.png' };
 
-Navbar.propTypes = { logo: PropTypes.string, title: PropTypes.string };
+Navbar.propTypes = {
+  logo: PropTypes.string,
+  title: PropTypes.string,
+  navMenuShown: PropTypes.bool
+};
 
 export default Navbar;
