@@ -3,9 +3,12 @@ import { shallow } from 'enzyme';
 import { MenuIcon } from './MenuIcon';
 
 describe('MenuIcon renders', () => {
-  test('a Font Awesome icon', () => {
-    const wrapper = shallow(<MenuIcon />);
-    expect(wrapper.find('.fas.fa-bars').length).toEqual(1);
+  describe('a Font Awesome icon', () => {
+    test('for bars when navMenuShown is false', () => {
+      const wrapper = shallow(<MenuIcon navMenuShown={false} />);
+      expect(wrapper.find('.fas.fa-bars').length).toEqual(1);
+      expect(wrapper.find('.fas.fa-times').length).toEqual(0);
+    });
   });
 });
 
