@@ -3,12 +3,12 @@
     $font-size: inherit,
     $padding: 1em 2.5em,
     $color: black,
-    $background: $site-tertiary-color,
+    $background: $site-tertiary-yellow,
     $margin: 1em
   );
   @include get-border(null);
-  @include btn-hover($starting-bg: $site-tertiary-color, $color: white);
-  @include btn-focus($starting-bg: $site-tertiary-color, $color: white);
+  @include btn-hover($starting-bg: $site-tertiary-yellow, $color: white);
+  @include btn-focus($starting-bg: $site-tertiary-yellow, $color: white);
   border-radius: 2em;
   text-transform: uppercase;
 }

@@ -43,7 +43,7 @@
   &:focus {
     @include darken-by-30($starting-bg);
     @include get-focus-shadow(
-      $starting-color: $site-secondary-color,
+      $starting-color: $site-secondary-purple,
       $tint: 20%
     );
     color: $color;

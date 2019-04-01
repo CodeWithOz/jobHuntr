@@ -4,7 +4,7 @@ $bg-color-stop-1: calc(40% + 2px);
 .landing-page {
   background: linear-gradient(
       170deg,
-      $site-main-color 40%,
+      $site-main-pink 40%,
       $off-white-bg $bg-color-stop-1,
       transparentize(white, 1) $bg-color-stop-1
     ),
@@ -60,7 +60,7 @@ $bg-color-stop-1: calc(40% + 2px);
 
         &:focus {
           @include get-focus-shadow(
-            $starting-color: $site-secondary-color,
+            $starting-color: $site-secondary-purple,
             $tint: 20%
           );
         }
