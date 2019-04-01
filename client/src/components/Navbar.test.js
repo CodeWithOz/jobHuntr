@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Navbar from './Navbar';
+import { Navbar } from './Navbar';
 import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 

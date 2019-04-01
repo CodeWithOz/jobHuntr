@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 
@@ -7,7 +8,7 @@ const navbarConfig = {
   btns: [{ type: 'login' }, { type: 'home' }]
 };
 
-const Navbar = ({ logo, title, navMenuShown }) => {
+export const Navbar = ({ logo, title, navMenuShown }) => {
   return (
     <header>
       <nav>
@@ -42,4 +43,8 @@ Navbar.propTypes = {
   navMenuShown: PropTypes.bool
 };
 
-export default Navbar;
+const mapStateToProps = ({ navMenuShown }) => {
+  return { navMenuShown };
+};
+
+export default connect(mapStateToProps)(Navbar);
