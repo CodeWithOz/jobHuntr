@@ -9,6 +9,12 @@ describe('MenuIcon renders', () => {
       expect(wrapper.find('.fas.fa-bars').length).toEqual(1);
       expect(wrapper.find('.fas.fa-times').length).toEqual(0);
     });
+
+    test('for close when navMenuShown is true', () => {
+      const wrapper = shallow(<MenuIcon navMenuShown={true} />);
+      expect(wrapper.find('.fas.fa-bars').length).toEqual(0);
+      expect(wrapper.find('.fas.fa-times').length).toEqual(1);
+    });
   });
 });
 
