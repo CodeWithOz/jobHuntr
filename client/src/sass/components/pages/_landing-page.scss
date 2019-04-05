@@ -77,10 +77,21 @@ $bg-color-stop-1: calc(40% + 2px);
       overflow-x: hidden;
       padding: $vertical-pad $horizontal-pad;
       position: relative;
+      box-sizing: border-box; // ensure padding doesn't affect width
 
       figure {
         margin: 0;
         position: relative;
+
+        &:first-child {
+          position: relative;
+        }
+
+        &:nth-of-type(n + 2) {
+          position: absolute;
+          left: $horizontal-pad;
+          top: $vertical-pad;
+        }
 
         // Crossfade animation
         // See Demo 3 of http://css3.bradshawenterprises.com/cfimg/
@@ -117,22 +128,30 @@ $bg-color-stop-1: calc(40% + 2px);
             animation-delay: $total-duration -
               $i *
               ($total-duration / $num-images);
-
-            @if $i == 1 {
-              // ensures that one image remains in the document flow
-              position: relative;
-            } @else {
-              // position all other images in the same place as the first
-              position: absolute;
-              left: $horizontal-pad;
-              top: $vertical-pad;
-            }
           }
         }
 
         .preview-img {
           border-radius: 10px;
           box-shadow: -10px 20px 60px -30px #aaa;
+        }
+      }
+    }
+
+    @media screen and (min-width: $portrait-phone-breakpoint) {
+      .text,
+      .image {
+        width: 50%;
+      }
+
+      .image {
+        $vertical-pad: 2em;
+
+        padding-top: $vertical-pad;
+        padding-bottom: $vertical-pad;
+
+        figure:nth-of-type(n + 2) {
+          top: $vertical-pad;
         }
       }
     }
