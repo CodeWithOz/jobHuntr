@@ -56,11 +56,13 @@ nav {
       padding: 0;
       position: absolute; // remove from document flow
       opacity: 0;
+      visibility: hidden;
       width: 100%;
       background: $site-secondary-purple;
 
       &.shown {
         opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -87,6 +89,7 @@ nav {
         width: 100%;
         justify-content: flex-end;
         opacity: 1;
+        visibility: visible;
         position: static; // put element back in document flow
         background: inherit;
       }
