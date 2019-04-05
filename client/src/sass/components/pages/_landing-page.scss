@@ -1,5 +1,6 @@
 $off-white-bg: darken(white, 10%);
 $bg-color-stop-1: calc(40% + 2px);
+$cta-image-shadow-color: black;
 
 .landing-page {
   background: linear-gradient(
@@ -133,7 +134,7 @@ $bg-color-stop-1: calc(40% + 2px);
 
         .preview-img {
           border-radius: 10px;
-          box-shadow: -10px 20px 60px -30px #aaa;
+          box-shadow: 0 15px 20px -20px $cta-image-shadow-color;
         }
       }
     }
@@ -150,8 +151,14 @@ $bg-color-stop-1: calc(40% + 2px);
         padding-top: $vertical-pad;
         padding-bottom: $vertical-pad;
 
-        figure:nth-of-type(n + 2) {
-          top: $vertical-pad;
+        figure {
+          &:nth-of-type(n + 2) {
+            top: $vertical-pad;
+          }
+
+          .preview-img {
+            box-shadow: 0 25px 30px -30px $cta-image-shadow-color;
+          }
         }
       }
     }
