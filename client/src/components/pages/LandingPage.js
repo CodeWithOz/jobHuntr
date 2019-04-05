@@ -16,15 +16,17 @@ const LandingPage = () => {
     <section className="landing-page">
       <section className="cta-container first-cta">
         <div className="text">
-          <p className="cta cta-1">{cta1.text1}</p>
-          <p className="cta cta-2">{cta1.text2}</p>
-          <div className="action">
-            <Button type="login" />
-          </div>
-          <div className="action">
-            <a href="#fake-link" className="demo-text">
-              {cta1.demoText}
-            </a>
+          <div className="centered-wrapper">
+            <p className="cta cta-1">{cta1.text1}</p>
+            <p className="cta cta-2">{cta1.text2}</p>
+            <div className="action">
+              <Button type="login" />
+            </div>
+            <div className="action">
+              <a href="#fake-link" className="demo-text">
+                {cta1.demoText}
+              </a>
+            </div>
           </div>
         </div>
         <div className="image">
