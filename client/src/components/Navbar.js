@@ -18,7 +18,7 @@ export const Navbar = ({ logo, title, navMenuShown }) => {
               <img className="logo" src={logo} alt="logo" />
             </figure>
           </div>
-          <p className="title">{title}</p>
+          <h1 className="title">{title}</h1>
         </section>
         <section className="menu-container">
           <MenuIcon />

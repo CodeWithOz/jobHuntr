@@ -25,8 +25,8 @@ const LandingPage = () => {
       <section className="cta-container first-cta">
         <div className="text">
           <div className="centered-wrapper">
-            <p className="cta cta-1">{cta1.text1}</p>
-            <p className="cta cta-2">{cta1.text2}</p>
+            <h2 className="cta cta-1">{cta1.text1}</h2>
+            <h2 className="cta cta-2">{cta1.text2}</h2>
             <div className="action">
               <Button type="login" />
             </div>
