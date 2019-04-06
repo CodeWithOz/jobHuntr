@@ -6,11 +6,19 @@ export const landingPageConfig = {
     text1: 'you apply',
     text2: 'we track',
     demoText: 'or click here to use a live demo'
+  },
+  cta2: {
+    heading: 'structure your search',
+    paragraph: `Those endless spreadsheets? Gone. Stay on top
+      of everyting, from your thoughts about the job, to the
+      company's details, job description, you name it. Your job
+      hunt, in one place.`,
+    cta: 'use a demo'
   }
 };
 
 const LandingPage = () => {
-  const { cta1 } = landingPageConfig;
+  const { cta1, cta2 } = landingPageConfig;
 
   return (
     <section className="landing-page">
@@ -45,6 +53,11 @@ const LandingPage = () => {
             />
           </figure>
         </div>
+      </section>
+      <section>
+        <h2>{cta2.heading}</h2>
+        <p>{cta2.paragraph}</p>
+        <p>{cta2.cta}</p>
       </section>
     </section>
   );
