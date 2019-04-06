@@ -54,10 +54,17 @@ const LandingPage = () => {
           </figure>
         </div>
       </section>
-      <section>
+      <section className="second-cta">
         <h2>{cta2.heading}</h2>
         <p>{cta2.paragraph}</p>
         <p>{cta2.action}</p>
+        <figure>
+          <img
+            className="preview-img"
+            src="https://via.placeholder.com/600x300/ff3569/3d3479.png"
+            alt="preview"
+          />
+        </figure>
       </section>
     </section>
   );
