@@ -15,11 +15,16 @@ describe('Landing page renders', () => {
     expect(wrapper.find({ type: 'login' }).is(Button)).toEqual(true);
   });
 
-  test('two preview images', () => {
-    expect(wrapper.find('.preview-img').length).toEqual(2);
-    wrapper.find('.preview-img').forEach(node => {
+  test('two preview images for the first CTA', () => {
+    expect(wrapper.find('.first-cta .preview-img').length).toEqual(2);
+    wrapper.find('.first-cta .preview-img').forEach(node => {
       expect(node.is('img')).toEqual(true);
     });
+  });
+
+  test('one preview image for the second CTA', () => {
+    expect(wrapper.find('.second-cta .preview-img').length).toEqual(1);
+    expect(wrapper.find('.second-cta .preview-img').is('img')).toEqual(true);
   });
 
   test('the CTA text', () => {
