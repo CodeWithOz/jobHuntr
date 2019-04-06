@@ -23,10 +23,16 @@ describe('Landing page renders', () => {
   });
 
   test('the CTA text', () => {
+    const { cta1, cta2 } = landingPageConfig;
+
     // first CTA
-    const { cta1 } = landingPageConfig;
     expect(wrapper.text()).toContain(cta1.text1);
     expect(wrapper.text()).toContain(cta1.text2);
     expect(wrapper.text()).toContain(cta1.demoText);
+
+    // second CTA
+    expect(wrapper.text()).toContain(cta2.heading);
+    expect(wrapper.text()).toContain(cta2.paragraph);
+    expect(wrapper.text()).toContain(cta2.cta);
   });
 });
