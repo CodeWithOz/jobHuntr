@@ -33,6 +33,6 @@ describe('Landing page renders', () => {
     // second CTA
     expect(wrapper.text()).toContain(cta2.heading);
     expect(wrapper.text()).toContain(cta2.paragraph);
-    expect(wrapper.text()).toContain(cta2.cta);
+    expect(wrapper.text()).toContain(cta2.action);
   });
 });

@@ -13,7 +13,7 @@ export const landingPageConfig = {
       of everyting, from your thoughts about the job, to the
       company's details, job description, you name it. Your job
       hunt, in one place.`,
-    cta: 'use a demo'
+    action: 'use a demo'
   }
 };
 
@@ -57,7 +57,7 @@ const LandingPage = () => {
       <section>
         <h2>{cta2.heading}</h2>
         <p>{cta2.paragraph}</p>
-        <p>{cta2.cta}</p>
+        <p>{cta2.action}</p>
       </section>
     </section>
   );
