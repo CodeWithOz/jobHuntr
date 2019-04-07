@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import App, { appConfig } from './App';
 import Navbar from './Navbar';
 import Main from './Main';
+import Footer from './Footer';
 
 describe('App renders', () => {
   let wrapper;
@@ -22,6 +23,10 @@ describe('App renders', () => {
 
   test('a Main component', () => {
     expect(wrapper.find(Main).length).toEqual(1);
+  });
+
+  test('a Footer component', () => {
+    expect(wrapper.find(Footer).length).toEqual(1);
   });
 });
 
