@@ -9,10 +9,13 @@ export const landingPageConfig = {
   },
   cta2: {
     heading: 'structure your search',
-    paragraph: `Those endless spreadsheets? Gone. Stay on top
-      of everyting, from your thoughts about the job, to the
-      company's details, job description, you name it. Your job
-      hunt, in one place.`,
+    paragraphs: [
+      'Spreadsheets? Gone.',
+      `Stay on top everything from your thoughts about the
+        job, to the job description, company details, you
+        name it.`,
+      'Your job hunt, in one place.'
+    ],
     action: 'use a demo'
   }
 };
@@ -54,17 +57,27 @@ const LandingPage = () => {
           </figure>
         </div>
       </section>
-      <section className="second-cta">
-        <h2>{cta2.heading}</h2>
-        <p>{cta2.paragraph}</p>
-        <p>{cta2.action}</p>
-        <figure>
-          <img
-            className="preview-img"
-            src="https://via.placeholder.com/600x300/ff3569/3d3479.png"
-            alt="preview"
-          />
-        </figure>
+      <section className="cta-container second-cta">
+        <div className="text">
+          <div className="centered-wrapper">
+            <h2 className="heading">{cta2.heading}</h2>
+            {cta2.paragraphs.map((paragraph, index) => (
+              <p className="paragraph" key={index}>
+                {paragraph}
+              </p>
+            ))}
+            <p className="action">{cta2.action}</p>
+          </div>
+        </div>
+        <div className="image">
+          <figure>
+            <img
+              className="preview-img"
+              src="https://via.placeholder.com/600x300/ff3569/3d3479.png"
+              alt="preview"
+            />
+          </figure>
+        </div>
       </section>
     </section>
   );

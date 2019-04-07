@@ -1,6 +1,16 @@
 $off-white-bg: darken(white, 10%);
 $bg-color-stop-1: calc(40% + 2px);
 $cta-image-shadow-color: black;
+$cta1-image-vertical-pad-map: (
+  start: 4em,
+  $portrait-phone-breakpoint: 2em
+);
+$cta2-image-vertical-pad: 2em;
+$cta-image-horizontal-pad: 1em;
+$cta2-text-horizontal-pad-map: (
+  start: 1em,
+  $portrait-phone-breakpoint: 3em
+);
 
 .landing-page {
   background: linear-gradient(
@@ -15,9 +25,7 @@ $cta-image-shadow-color: black;
   .cta-container {
     display: flex;
     flex-wrap: wrap;
-  }
 
-  .first-cta {
     .text,
     .image {
       width: 100%;
@@ -28,109 +36,18 @@ $cta-image-shadow-color: black;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      color: white;
-
-      .cta {
-        font-size: 2.5em;
-        margin: 0.1em 0;
-        text-align: center;
-        text-transform: capitalize;
-        width: 100%;
-      }
-
-      .cta-1 {
-        font-weight: 200;
-      }
-
-      .cta-2 {
-        font-weight: 500;
-      }
-
-      .action {
-        text-align: center;
-        width: 100%;
-      }
-
-      .demo-text {
-        color: white;
-
-        &:hover,
-        &:focus {
-          color: darken(white, 20%);
-        }
-
-        &:focus {
-          @include get-focus-shadow(
-            $starting-color: $site-secondary-purple,
-            $tint: 20%
-          );
-        }
-      }
+      box-sizing: border-box;
     }
 
     .image {
-      $vertical-pad: 4em;
-      $horizontal-pad: 1em;
-
       display: flex;
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
-      padding: $vertical-pad $horizontal-pad;
-      position: relative;
-      box-sizing: border-box; // ensure padding doesn't affect width
+      box-sizing: border-box;
 
       figure {
         margin: 0;
-        position: relative;
-
-        &:first-child {
-          position: relative;
-        }
-
-        &:nth-of-type(n + 2) {
-          position: absolute;
-          left: $horizontal-pad;
-          top: $vertical-pad;
-        }
-
-        // Crossfade animation
-        // See Demo 3 of http://css3.bradshawenterprises.com/cfimg/
-        $num-images: 2;
-        $time-on-screen: 3s;
-        $crossfade-duration: 0.5s;
-        $total-duration: ($time-on-screen + $crossfade-duration) * $num-images;
-
-        @keyframes imgCrossfade {
-          0% {
-            opacity: 1;
-          }
-          #{(($time-on-screen / $total-duration) * 100)}% {
-            opacity: 1;
-          }
-          #{(1 / $num-images) * 100}% {
-            opacity: 0;
-          }
-          #{100 - (($crossfade-duration / $total-duration) * 100)}% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-
-        animation-name: imgCrossfade;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: $total-duration;
-
-        @for $i from 1 through $num-images {
-          &:nth-of-type(#{$i}) {
-            animation-delay: $total-duration -
-              $i *
-              ($total-duration / $num-images);
-          }
-        }
 
         .preview-img {
           border-radius: 10px;
@@ -139,26 +56,181 @@ $cta-image-shadow-color: black;
       }
     }
 
-    @media screen and (min-width: $portrait-phone-breakpoint) {
-      .text,
-      .image {
-        width: 50%;
+    &.first-cta {
+      .text {
+        color: white;
+
+        .cta {
+          font-size: 2.5em;
+          margin: 0.1em 0;
+          text-align: center;
+          text-transform: capitalize;
+          width: 100%;
+        }
+
+        .cta-1 {
+          font-weight: 200;
+        }
+
+        .cta-2 {
+          font-weight: 500;
+        }
+
+        .action {
+          text-align: center;
+          width: 100%;
+        }
+
+        .demo-text {
+          color: white;
+
+          &:hover,
+          &:focus {
+            color: darken(white, 20%);
+          }
+
+          &:focus {
+            @include get-focus-shadow(
+              $starting-color: $site-secondary-purple,
+              $tint: 20%
+            );
+          }
+        }
       }
 
       .image {
-        $vertical-pad: 2em;
-
-        padding-top: $vertical-pad;
-        padding-bottom: $vertical-pad;
+        position: relative;
+        padding: map-get($cta1-image-vertical-pad-map, start)
+          $cta-image-horizontal-pad;
 
         figure {
+          position: relative;
+
           &:nth-of-type(n + 2) {
-            top: $vertical-pad;
+            position: absolute;
+            left: $cta-image-horizontal-pad;
+            top: map-get($cta1-image-vertical-pad-map, start);
           }
 
-          .preview-img {
-            box-shadow: 0 25px 30px -30px $cta-image-shadow-color;
+          // Crossfade animation
+          // See Demo 3 of http://css3.bradshawenterprises.com/cfimg/
+          $num-images: 2;
+          $time-on-screen: 3s;
+          $crossfade-duration: 0.5s;
+          $total-duration: ($time-on-screen + $crossfade-duration) * $num-images;
+
+          @keyframes imgCrossfade {
+            0% {
+              opacity: 1;
+            }
+            #{(($time-on-screen / $total-duration) * 100)}% {
+              opacity: 1;
+            }
+            #{(1 / $num-images) * 100}% {
+              opacity: 0;
+            }
+            #{100 - (($crossfade-duration / $total-duration) * 100)}% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
           }
+
+          animation-name: imgCrossfade;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-duration: $total-duration;
+
+          @for $i from 1 through $num-images {
+            &:nth-of-type(#{$i}) {
+              animation-delay: $total-duration -
+                $i *
+                ($total-duration / $num-images);
+            }
+          }
+        }
+      }
+    }
+
+    &.second-cta {
+      .text {
+        padding: 0 map-get($cta2-text-horizontal-pad-map, start);
+        text-align: center;
+
+        .heading,
+        .action {
+          color: $site-secondary-purple;
+        }
+
+        .heading {
+          text-transform: capitalize;
+          font-size: 1.7em;
+        }
+
+        .paragraph {
+          color: lighten(black, 30%);
+          font-size: 1.2em;
+          margin: 0;
+        }
+      }
+
+      .image {
+        padding: $cta2-image-vertical-pad $cta-image-horizontal-pad;
+      }
+    }
+  }
+
+  @media screen and (min-width: $portrait-phone-breakpoint) {
+    padding: 0;
+
+    .cta-container {
+      .image {
+        .preview-img {
+          box-shadow: 0 25px 30px -30px $cta-image-shadow-color;
+        }
+      }
+
+      &.first-cta {
+        .text,
+        .image {
+          width: 50%;
+        }
+
+        .image {
+          padding-top: map-get(
+            $cta1-image-vertical-pad-map,
+            $portrait-phone-breakpoint
+          );
+          padding-bottom: map-get(
+            $cta1-image-vertical-pad-map,
+            $portrait-phone-breakpoint
+          );
+
+          figure:nth-of-type(n + 2) {
+            top: map-get(
+              $cta1-image-vertical-pad-map,
+              $portrait-phone-breakpoint
+            );
+          }
+        }
+      }
+
+      &.second-cta {
+        .text {
+          padding-left: map-get(
+            $cta2-text-horizontal-pad-map,
+            $portrait-phone-breakpoint
+          );
+          padding-right: map-get(
+            $cta2-text-horizontal-pad-map,
+            $portrait-phone-breakpoint
+          );
+          width: 60%;
+        }
+
+        .image {
+          width: 40%;
         }
       }
     }
