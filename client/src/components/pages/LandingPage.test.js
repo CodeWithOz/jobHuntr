@@ -27,6 +27,13 @@ describe('Landing page renders', () => {
     expect(wrapper.find('.second-cta .preview-img').is('img')).toEqual(true);
   });
 
+  test('two links to the demo page', () => {
+    expect(wrapper.find('[href="#demo-link"]').length).toEqual(2);
+    wrapper.find('[href="#demo-link"]').forEach(node => {
+      expect(node.is('a')).toEqual(true);
+    });
+  });
+
   test('the CTA text', () => {
     const { cta1, cta2 } = landingPageConfig;
 
