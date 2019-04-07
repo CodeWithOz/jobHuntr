@@ -37,7 +37,9 @@ describe('Landing page renders', () => {
 
     // second CTA
     expect(wrapper.text()).toContain(cta2.heading);
-    expect(wrapper.text()).toContain(cta2.paragraph);
+    cta2.paragraphs.forEach(paragraph => {
+      expect(wrapper.text()).toContain(paragraph);
+    });
     expect(wrapper.text()).toContain(cta2.action);
   });
 });
