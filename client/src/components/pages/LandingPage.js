@@ -34,7 +34,7 @@ const LandingPage = () => {
               <Button type="login" />
             </div>
             <div className="action">
-              <a href="#fake-link" className="demo-text">
+              <a href="#demo-link" className="demo-text">
                 {cta1.demoText}
               </a>
             </div>
@@ -66,7 +66,9 @@ const LandingPage = () => {
                 {paragraph}
               </p>
             ))}
-            <p className="action">{cta2.action}</p>
+            <div className="action">
+              <a href="#demo-link">{cta2.action}</a>
+            </div>
           </div>
         </div>
         <div className="image">

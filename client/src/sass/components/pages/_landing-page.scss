@@ -83,6 +83,7 @@ $cta2-text-horizontal-pad-map: (
 
         .demo-text {
           color: white;
+          padding: 0.5em;
 
           &:hover,
           &:focus {
@@ -172,6 +173,30 @@ $cta2-text-horizontal-pad-map: (
           color: lighten(black, 30%);
           font-size: 1.2em;
           margin: 0;
+        }
+
+        .action {
+          $padding: 0.5em;
+
+          padding: $padding;
+
+          a {
+            padding: $padding;
+            text-transform: capitalize;
+            width: 100%;
+
+            &:hover,
+            &:focus {
+              color: lighten($site-secondary-purple, 20%);
+            }
+
+            &:focus {
+              @include get-focus-shadow(
+                $starting-color: $site-secondary-purple,
+                $tint: 20%
+              );
+            }
+          }
         }
       }
 
