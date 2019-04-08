@@ -11,8 +11,8 @@ export const landingPageConfig = {
     heading: 'structure your search',
     paragraphs: [
       'Spreadsheets? Gone.',
-      `Stay on top everything from your thoughts about the
-        job, to the job description, company details, you
+      `Stay on top everything, from your thoughts about the
+        job to the job description, company details, you
         name it.`,
       'Your job hunt, in one place.'
     ],

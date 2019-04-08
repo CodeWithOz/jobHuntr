@@ -13,9 +13,9 @@ const footerConfig = {
       linkText: 'huntr.co'
     },
     {
-      plug: 'Source code available at ',
+      plug: 'Source code available at the ',
       url: 'https://github.com/CodeWithOz/jobHuntr',
-      linkText: 'the GitHub repo'
+      linkText: 'GitHub repo'
     }
   ]
 };
