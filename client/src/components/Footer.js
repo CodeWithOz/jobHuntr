@@ -23,7 +23,6 @@ const footerConfig = {
 const Footer = () => {
   return (
     <footer className="footer">
-      <hr />
       {footerConfig.statements.map((statement, index) => (
         <p className="statement" key={index}>
           {statement.plug}
