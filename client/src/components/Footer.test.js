@@ -16,4 +16,10 @@ describe('Footer renders', () => {
   test('a link to huntr.com', () => {
     expect(wrapper.find('[href="https://huntr.co"]').length).toEqual(1);
   });
+
+  test('a link to the github repo', () => {
+    expect(
+      wrapper.find('[href="https://github.com/CodeWithOz/jobHuntr"]').length
+    ).toEqual(1);
+  });
 });
