@@ -1,30 +1,35 @@
 import React from 'react';
 
 const footerConfig = {
-  huntrPlug: 'Modeled after ',
-  huntrUrl: 'https://huntr.co',
-  githubPlug: 'You can improve jobHuntr at ',
-  githubUrl: 'https://github.com/CodeWithOz/jobHuntr',
-  linkedinPlug: 'Made by ',
-  linkedinUrl: 'https://www.linkedin.com/in/uchechukwu-ozoemena/'
+  statements: [
+    {
+      plug: 'Made by ',
+      url: 'https://www.linkedin.com/in/uchechukwu-ozoemena/',
+      linkText: 'Uchechukwu Ozoemena'
+    },
+    {
+      plug: 'Modeled after ',
+      url: 'https://huntr.co',
+      linkText: 'huntr.co'
+    },
+    {
+      plug: 'You can improve jobHuntr at ',
+      url: 'https://github.com/CodeWithOz/jobHuntr',
+      linkText: 'the GitHub repo'
+    }
+  ]
 };
 
 const Footer = () => {
   return (
     <div>
       <hr />
-      <p>
-        {footerConfig.linkedinPlug}
-        <a href={footerConfig.linkedinUrl}>Uchechukwu Ozoemena</a>.
-      </p>
-      <p>
-        {footerConfig.huntrPlug}
-        <a href={footerConfig.huntrUrl}>huntr.co</a>.
-      </p>
-      <p>
-        {footerConfig.githubPlug}
-        <a href={footerConfig.githubUrl}>the GitHub repo</a>.
-      </p>
+      {footerConfig.statements.map((statement, index) => (
+        <p key={index}>
+          {statement.plug}
+          <a href={statement.url}>{statement.linkText}</a>.
+        </p>
+      ))}
     </div>
   );
 };
