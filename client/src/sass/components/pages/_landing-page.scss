@@ -82,8 +82,15 @@ $cta2-text-horizontal-pad-map: (
         }
 
         .demo-text {
-          color: white;
           padding: 0.5em;
+          text-decoration: none;
+
+          .underline {
+            $link-color: white;
+
+            border-bottom: 1px dashed $link-color;
+            color: $link-color;
+          }
 
           &:hover,
           &:focus {
@@ -184,7 +191,12 @@ $cta2-text-horizontal-pad-map: (
             padding: $padding;
             text-transform: capitalize;
             width: 100%;
-            color: $site-secondary-purple;
+            text-decoration: none;
+
+            .underline {
+              color: $site-secondary-purple;
+              border-bottom: 1px dashed $site-secondary-purple;
+            }
 
             &:hover,
             &:focus {
