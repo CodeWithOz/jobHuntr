@@ -22,15 +22,18 @@ const footerConfig = {
 
 const Footer = () => {
   return (
-    <div>
+    <footer className="footer">
       <hr />
       {footerConfig.statements.map((statement, index) => (
-        <p key={index}>
+        <p className="statement" key={index}>
           {statement.plug}
-          <a href={statement.url}>{statement.linkText}</a>.
+          <a href={statement.url} className="link">
+            {statement.linkText}
+          </a>
+          .
         </p>
       ))}
-    </div>
+    </footer>
   );
 };
 
