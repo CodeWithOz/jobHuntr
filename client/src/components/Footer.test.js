@@ -22,4 +22,11 @@ describe('Footer renders', () => {
       wrapper.find('[href="https://github.com/CodeWithOz/jobHuntr"]').length
     ).toEqual(1);
   });
+
+  test('a link to my LinkedIn', () => {
+    expect(
+      wrapper.find('[href="https://www.linkedin.com/in/uchechukwu-ozoemena/"]')
+        .length
+    ).toEqual(1);
+  });
 });
