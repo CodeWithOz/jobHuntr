@@ -5,7 +5,7 @@ const footerConfig = {
     {
       plug: 'Made by ',
       url: 'https://www.linkedin.com/in/uchechukwu-ozoemena/',
-      linkText: 'Uchechukwu Ozoemena'
+      linkText: 'Uche Ozoemena'
     },
     {
       plug: 'Modeled after ',
@@ -13,7 +13,7 @@ const footerConfig = {
       linkText: 'huntr.co'
     },
     {
-      plug: 'You can improve jobHuntr at ',
+      plug: 'Source code available at ',
       url: 'https://github.com/CodeWithOz/jobHuntr',
       linkText: 'the GitHub repo'
     }
