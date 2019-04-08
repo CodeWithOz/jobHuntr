@@ -1,5 +1,11 @@
 $off-white-bg: darken(white, 10%);
-$bg-color-stop-1: calc(40% + 2px);
+$bg-color-stop-1: 40%;
+$bg-color-stop-2: 95%;
+
+@function get-gradient-stop($color-stop) {
+  @return calc(#{$color-stop} + 2px);
+}
+
 $cta-image-shadow-color: black;
 $cta1-image-vertical-pad-map: (
   start: 4em,
@@ -15,11 +21,16 @@ $cta2-text-horizontal-pad-map: (
 .landing-page {
   background: linear-gradient(
       170deg,
-      $site-main-pink 40%,
-      $off-white-bg $bg-color-stop-1,
-      transparentize(white, 1) $bg-color-stop-1
+      $site-main-pink $bg-color-stop-1,
+      $off-white-bg get-gradient-stop($bg-color-stop-1),
+      transparentize(white, 1) get-gradient-stop($bg-color-stop-1)
     ),
-    linear-gradient(190deg, $off-white-bg, $off-white-bg 70%, white 70%);
+    linear-gradient(
+      187deg,
+      $off-white-bg,
+      $off-white-bg $bg-color-stop-2,
+      white get-gradient-stop($bg-color-stop-2)
+    );
   padding: 3em 0;
 
   .cta-container {
@@ -220,6 +231,21 @@ $cta2-text-horizontal-pad-map: (
   }
 
   @media screen and (min-width: $portrait-phone-breakpoint) {
+    $bg-color-stop-1: 43%;
+    $bg-color-stop-2: 93%;
+
+    background: linear-gradient(
+        175deg,
+        $site-main-pink $bg-color-stop-1,
+        $off-white-bg get-gradient-stop($bg-color-stop-1),
+        transparentize(white, 1) get-gradient-stop($bg-color-stop-1)
+      ),
+      linear-gradient(
+        183deg,
+        $off-white-bg,
+        $off-white-bg $bg-color-stop-2,
+        white get-gradient-stop($bg-color-stop-2)
+      );
     padding: 0;
 
     .cta-container {
