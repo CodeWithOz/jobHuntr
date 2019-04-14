@@ -15,7 +15,10 @@ $cta2-image-vertical-pad: 2em;
 $cta-image-horizontal-pad: 1em;
 $cta2-text-horizontal-pad-map: (
   start: 1em,
-  $portrait-phone-breakpoint: 3em
+  $portrait-phone-breakpoint: 3em,
+  $landscape-phone-breakpoint: 4em,
+  $portrait-tablet-breakpoint: 7em,
+  $large-desktop-breakpoint: 16em
 );
 
 .landing-page {
@@ -282,19 +285,46 @@ $cta2-text-horizontal-pad-map: (
 
       &.second-cta {
         .text {
-          padding-left: map-get(
-            $cta2-text-horizontal-pad-map,
-            $portrait-phone-breakpoint
-          );
-          padding-right: map-get(
-            $cta2-text-horizontal-pad-map,
-            $portrait-phone-breakpoint
-          );
+          padding: 0
+            map-get($cta2-text-horizontal-pad-map, $portrait-phone-breakpoint);
           width: 60%;
         }
 
         .image {
           width: 40%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $landscape-phone-breakpoint) {
+    .cta-container {
+      &.second-cta {
+        .text {
+          padding: 0
+            map-get($cta2-text-horizontal-pad-map, $landscape-phone-breakpoint);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $portrait-tablet-breakpoint) {
+    .cta-container {
+      &.second-cta {
+        .text {
+          padding: 0
+            map-get($cta2-text-horizontal-pad-map, $portrait-tablet-breakpoint);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $large-desktop-breakpoint) {
+    .cta-container {
+      &.second-cta {
+        .text {
+          padding: 0
+            map-get($cta2-text-horizontal-pad-map, $large-desktop-breakpoint);
         }
       }
     }
