@@ -22,4 +22,11 @@
       font-size: 0.8em;
     }
   }
+
+  @media screen and (min-width: $landscape-phone-breakpoint) {
+    .navbtn {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
 }
