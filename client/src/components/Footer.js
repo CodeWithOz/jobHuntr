@@ -3,7 +3,7 @@ import React from 'react';
 const footerConfig = {
   statements: [
     {
-      plug: 'Made by ',
+      plug: 'Coded by ',
       url: 'https://www.linkedin.com/in/uchechukwu-ozoemena/',
       linkText: 'Uche Ozoemena'
     },
@@ -13,9 +13,9 @@ const footerConfig = {
       linkText: 'huntr.co'
     },
     {
-      plug: 'Source code available at the ',
+      plug: 'Source code available on ',
       url: 'https://github.com/CodeWithOz/jobHuntr',
-      linkText: 'GitHub repo'
+      linkText: 'GitHub'
     }
   ]
 };
