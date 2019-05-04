@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { Link } from 'react-router-dom';
 import LandingPage, { landingPageConfig } from './LandingPage';
 import Button from '../Button';
 
@@ -28,9 +29,10 @@ describe('Landing page renders', () => {
   });
 
   test('two links to the demo page', () => {
-    expect(wrapper.find('[href="#demo-link"]').length).toEqual(2);
-    wrapper.find('[href="#demo-link"]').forEach(node => {
-      expect(node.is('a')).toEqual(true);
+    const demoUrl = '/demo';
+    expect(wrapper.find({ to: demoUrl }).length).toEqual(2);
+    wrapper.find({ to: demoUrl }).forEach(node => {
+      expect(node.is(Link)).toEqual(true);
     });
   });
 
