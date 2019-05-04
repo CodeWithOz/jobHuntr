@@ -3,11 +3,26 @@ import { Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import DemoPage from './pages/DemoPage';
 
+const mainConfig = {
+  routes: {
+    landingPage: {
+      path: '/',
+      component: LandingPage
+    },
+    demoPage: {
+      path: '/demo',
+      component: DemoPage
+    }
+  }
+};
+
 const Main = () => {
+  const { landingPage, demoPage } = mainConfig.routes;
+
   return (
     <main>
-      <Route exact path="/" component={LandingPage} />
-      <Route exact path="/demo" component={DemoPage} />
+      <Route exact {...landingPage} />
+      <Route exact {...demoPage} />
     </main>
   );
 };
