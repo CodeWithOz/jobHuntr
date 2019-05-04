@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { Link } from 'react-router-dom';
+import { mount, shallow } from 'enzyme';
+import { Link, MemoryRouter } from 'react-router-dom';
 import LandingPage, { landingPageConfig } from './LandingPage';
 import Button from '../Button';
 
@@ -38,6 +38,12 @@ describe('Landing page renders', () => {
 
   test('the CTA text', () => {
     const { cta1, cta2 } = landingPageConfig;
+
+    const wrapper = mount(
+      <MemoryRouter>
+        <LandingPage />
+      </MemoryRouter>
+    );
 
     // first CTA
     expect(wrapper.text()).toContain(cta1.text1);
