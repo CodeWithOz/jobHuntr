@@ -303,6 +303,11 @@ $cta2-text-horizontal-pad-map: (
         .text {
           padding: 0
             map-get($cta2-text-horizontal-pad-map, $landscape-phone-breakpoint);
+          width: 70%;
+        }
+
+        .image {
+          width: 30%;
         }
       }
     }
@@ -334,6 +339,14 @@ $cta2-text-horizontal-pad-map: (
     // ensure the content fills the screen
     .cta-container {
       min-height: 50vh;
+
+      &.first-cta .text .cta {
+        font-size: 3em;
+      }
+
+      &.second-cta .text .heading {
+        font-size: 2.1em;
+      }
     }
   }
 }
