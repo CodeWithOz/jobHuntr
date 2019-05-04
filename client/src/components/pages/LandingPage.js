@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 export const landingPageConfig = {
+  demoUrl: '/demo',
   cta1: {
     text1: 'you apply',
     text2: 'we track',
@@ -34,9 +36,9 @@ const LandingPage = () => {
               <Button type="login" />
             </div>
             <div className="action">
-              <a href="#demo-link" className="demo-text">
+              <Link to={landingPageConfig.demoUrl} className="demo-text">
                 <span className="underline">{cta1.demoText}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,9 +69,9 @@ const LandingPage = () => {
               </p>
             ))}
             <div className="action">
-              <a href="#demo-link">
+              <Link to={landingPageConfig.demoUrl}>
                 <span className="underline">{cta2.action}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
