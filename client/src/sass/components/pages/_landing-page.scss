@@ -129,9 +129,7 @@ $cta2-text-horizontal-pad-map: (
           position: relative;
 
           &:nth-of-type(n + 2) {
-            position: absolute;
-            left: $cta-image-horizontal-pad;
-            top: map-get($cta1-image-vertical-pad-map, start);
+            transform: translateX(-100%);
           }
 
           // Crossfade animation
@@ -273,13 +271,6 @@ $cta2-text-horizontal-pad-map: (
             $cta1-image-vertical-pad-map,
             $portrait-phone-breakpoint
           );
-
-          figure:nth-of-type(n + 2) {
-            top: map-get(
-              $cta1-image-vertical-pad-map,
-              $portrait-phone-breakpoint
-            );
-          }
         }
       }
 
