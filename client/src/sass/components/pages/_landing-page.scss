@@ -316,6 +316,21 @@ $cta2-text-horizontal-pad-map: (
   }
 
   @media screen and (min-width: $large-desktop-breakpoint) {
+    $bg-color-stop-2: 92%;
+
+    background: linear-gradient(
+        175deg,
+        $site-main-pink $bg-color-stop-1,
+        $off-white-bg get-gradient-stop($bg-color-stop-1),
+        transparentize(white, 1) get-gradient-stop($bg-color-stop-1)
+      ),
+      linear-gradient(
+        182.5deg,
+        $off-white-bg,
+        $off-white-bg $bg-color-stop-2,
+        white get-gradient-stop($bg-color-stop-2)
+      );
+
     .cta-container {
       &.second-cta {
         .text {
