@@ -329,4 +329,11 @@ $cta2-text-horizontal-pad-map: (
       }
     }
   }
+
+  @media screen and (min-height: $long-devices) {
+    // ensure the content fills the screen
+    .cta-container {
+      min-height: 50vh;
+    }
+  }
 }
