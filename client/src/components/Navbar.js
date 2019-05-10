@@ -5,7 +5,7 @@ import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 
 const navbarConfig = {
-  btns: [{ text: 'login' }, { text: 'home' }]
+  btns: [{ text: 'login', isLink: false }, { text: 'home', isLink: true }]
 };
 
 export const Navbar = ({ logo, title, navMenuShown }) => {
@@ -26,7 +26,7 @@ export const Navbar = ({ logo, title, navMenuShown }) => {
         <section className="btn-container">
           <ul className={`btn-list${navMenuShown ? ' shown' : ''}`}>
             {navbarConfig.btns.map((btn, index) => (
-              <NavBtn text={btn.text} key={index} />
+              <NavBtn {...btn} key={index} />
             ))}
           </ul>
         </section>
