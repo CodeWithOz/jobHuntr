@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
-const LinkBtn = props => {
+export const LinkBtn = props => {
   const {
     history,
     location,
@@ -27,4 +28,4 @@ LinkBtn.propTypes = {
   className: PropTypes.string
 };
 
-export default LinkBtn;
+export default withRouter(LinkBtn);
