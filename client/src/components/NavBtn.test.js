@@ -10,11 +10,20 @@ describe('NavBtn renders', () => {
     expect(wrapper.text()).toContain(text);
   });
 
-  test('a LinkBtn according to isLink prop', () => {
-    const wrapper = shallow(<NavBtn isLink />);
-    expect(wrapper.find(LinkBtn).length).toEqual(1);
+  describe('a LinkBtn', () => {
+    test('according to isLink prop', () => {
+      const wrapper = shallow(<NavBtn isLink />);
+      expect(wrapper.find(LinkBtn).length).toEqual(1);
 
-    wrapper.setProps({ isLink: false });
-    expect(wrapper.find(LinkBtn).length).toEqual(0);
+      wrapper.setProps({ isLink: false });
+      expect(wrapper.find(LinkBtn).length).toEqual(0);
+    });
+
+    test(`with the correct 'to' prop`, () => {
+      const to = 'test';
+      const wrapper = shallow(<NavBtn isLink to={to} />);
+
+      expect(wrapper.find(LinkBtn).prop('to')).toEqual(to);
+    });
   });
 });
