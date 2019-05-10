@@ -47,3 +47,12 @@ describe('Navbar renders', () => {
     expect(wrapper.find('.btn-list.shown').length).toEqual(0);
   });
 });
+
+describe('Button for', () => {
+  describe('login', () => {
+    test('is not a link', () => {
+      const wrapper = shallow(<Navbar />);
+      expect(wrapper.find({ text: 'login' }).prop('isLink')).toBe(false);
+    });
+  });
+});
