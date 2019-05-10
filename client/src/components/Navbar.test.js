@@ -55,4 +55,11 @@ describe('Button for', () => {
       expect(wrapper.find({ text: 'login' }).prop('isLink')).toBe(false);
     });
   });
+
+  describe('home', () => {
+    test('is a link', () => {
+      const wrapper = shallow(<Navbar />);
+      expect(wrapper.find({ text: 'home' }).prop('isLink')).toBe(true);
+    });
+  });
 });
