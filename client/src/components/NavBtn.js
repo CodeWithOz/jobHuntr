@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NavBtn = ({ type }) => {
+const NavBtn = ({ text }) => {
   return (
     <li className="navbtn-item">
-      <button className="navbtn">{type}</button>
+      <button className="navbtn">{text}</button>
     </li>
   );
 };
 
 NavBtn.propTypes = {
-  type: PropTypes.string
+  text: PropTypes.string
 };
 
 export default NavBtn;

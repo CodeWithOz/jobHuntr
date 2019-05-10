@@ -3,9 +3,9 @@ import { shallow } from 'enzyme';
 import NavBtn from './NavBtn';
 
 describe('NavBtn renders', () => {
-  test('its type prop', () => {
-    const type = 'test';
-    const wrapper = shallow(<NavBtn type={type} />);
-    expect(wrapper.text()).toContain(type);
+  test('its text prop', () => {
+    const text = 'test';
+    const wrapper = shallow(<NavBtn text={text} />);
+    expect(wrapper.text()).toContain(text);
   });
 });

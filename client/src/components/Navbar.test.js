@@ -25,8 +25,8 @@ describe('Navbar renders', () => {
     });
 
     test('logging in', () => {
-      expect(wrapper.find({ type: 'login' }).is(NavBtn)).toEqual(true);
-      expect(wrapper.find({ type: 'login' }).length).toEqual(1);
+      expect(wrapper.find({ text: 'login' }).is(NavBtn)).toEqual(true);
+      expect(wrapper.find({ text: 'login' }).length).toEqual(1);
     });
 
     test('the menu icon', () => {
@@ -34,8 +34,8 @@ describe('Navbar renders', () => {
     });
 
     test('home', () => {
-      expect(wrapper.find({ type: 'home' }).is(NavBtn)).toEqual(true);
-      expect(wrapper.find({ type: 'home' }).length).toEqual(1);
+      expect(wrapper.find({ text: 'home' }).is(NavBtn)).toEqual(true);
+      expect(wrapper.find({ text: 'home' }).length).toEqual(1);
     });
   });
 
