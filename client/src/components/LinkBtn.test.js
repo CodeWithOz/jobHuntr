@@ -17,3 +17,21 @@ describe('LinkBtn renders', () => {
     expect(wrapper.find('button').prop('className')).toEqual(className);
   });
 });
+
+describe('When clicked, the inner button', () => {
+  test(`pushes the 'to' prop to the history stack`, () => {
+    const props = {
+      history: {
+        push: jest.fn()
+      },
+      to: 'test'
+    };
+    const wrapper = shallow(<LinkBtn {...props} />);
+    const innerBtn = wrapper.find('button');
+
+    expect(props.history.push).not.toHaveBeenCalled();
+    innerBtn.simulate('click');
+    expect(props.history.push).toHaveBeenCalledTimes(1);
+    expect(props.history.push).toHaveBeenCalledWith(props.to);
+  });
+});
