@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LinkBtn = () => {
-  return <div>LinkBtn</div>;
+  return <button>LinkBtn</button>;
 };
 
 export default LinkBtn;
