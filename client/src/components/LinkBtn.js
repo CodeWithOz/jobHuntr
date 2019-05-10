@@ -12,7 +12,15 @@ const LinkBtn = props => {
     // the above filters out props that don't matter to button
     ...rest
   } = props;
-  return <button {...rest} />;
+  return (
+    <button
+      {...rest}
+      onClick={event => {
+        onClick && onClick(event);
+        history.push(to);
+      }}
+    />
+  );
 };
 
 LinkBtn.propTypes = {
