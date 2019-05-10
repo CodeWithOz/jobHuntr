@@ -1,8 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LinkBtn = ({ children, className }) => {
-  return <button className={className}>{children}</button>;
+const LinkBtn = props => {
+  const {
+    history,
+    location,
+    match,
+    staticContext,
+    to,
+    onClick,
+    // the above filters out props that don't matter to button
+    ...rest
+  } = props;
+  return <button {...rest} />;
 };
 
 LinkBtn.propTypes = {
