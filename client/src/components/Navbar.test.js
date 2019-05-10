@@ -49,17 +49,31 @@ describe('Navbar renders', () => {
 });
 
 describe('Button for', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Navbar />);
+  });
+
   describe('login', () => {
     test('is not a link', () => {
-      const wrapper = shallow(<Navbar />);
       expect(wrapper.find({ text: 'login' }).prop('isLink')).toBe(false);
     });
   });
 
   describe('home', () => {
+    let homeBtn;
+
+    beforeEach(() => {
+      homeBtn = wrapper.find({ text: 'home' });
+    });
+
     test('is a link', () => {
-      const wrapper = shallow(<Navbar />);
-      expect(wrapper.find({ text: 'home' }).prop('isLink')).toBe(true);
+      expect(homeBtn.prop('isLink')).toBe(true);
+    });
+
+    test(`has a 'to' prop`, () => {
+      expect(homeBtn.prop('to')).toBeDefined();
     });
   });
 });
