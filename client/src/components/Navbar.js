@@ -5,7 +5,10 @@ import MenuIcon from './MenuIcon';
 import NavBtn from './NavBtn';
 
 const navbarConfig = {
-  btns: [{ text: 'login', isLink: false }, { text: 'home', isLink: true }]
+  btns: [
+    { text: 'login', isLink: false },
+    { text: 'home', isLink: true, to: '/' }
+  ]
 };
 
 export const Navbar = ({ logo, title, navMenuShown }) => {
