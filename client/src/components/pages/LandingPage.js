@@ -46,14 +46,14 @@ const LandingPage = () => {
           <figure>
             <img
               className="preview-img"
-              src="https://via.placeholder.com/600x300/3d3479/ff3569.png"
+              src="https://via.placeholder.com/900x300/3d3479/ff3569.png"
               alt="preview"
             />
           </figure>
           <figure>
             <img
               className="preview-img"
-              src="https://via.placeholder.com/600x300/f5a623/3d3479.png"
+              src="https://via.placeholder.com/900x300/f5a623/3d3479.png"
               alt="preview"
             />
           </figure>
